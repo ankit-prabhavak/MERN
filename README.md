@@ -9,12 +9,6 @@
   <img src="https://img.shields.io/badge/Node.js-%23339933.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/github/languages/top/yourusername/mern" alt="Top Language"/>
-  <img src="https://img.shields.io/github/last-commit/yourusername/mern" alt="Last Commit"/>
-  <img src="https://img.shields.io/github/license/yourusername/mern" alt="License"/>
-</p>
-
 ## About
 
 This repository serves as my learning playground for mastering the MERN stack - a powerful combination of technologies for building modern, scalable web applications. Each project and exercise demonstrates progressive skill development from basic concepts to advanced implementations [web:2].
