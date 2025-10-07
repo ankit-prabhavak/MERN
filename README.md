@@ -9,10 +9,6 @@
   <img src="https://img.shields.io/badge/Node.js-%23339933.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
 </p>
 
-## About
-
-This repository serves as my learning playground for mastering the MERN stack - a powerful combination of technologies for building modern, scalable web applications. Each project and exercise demonstrates progressive skill development from basic concepts to advanced implementations [web:2].
-
 ## Tech Stack
 
 | Technology | Purpose | Description |
@@ -42,11 +38,11 @@ cd mern
 
 ## Best Practices Implemented
 
-- **Modular Architecture**: Organized code structure for maintainability [web:6]
+- **Modular Architecture**: Organized code structure for maintainability
 - **Environment Configuration**: Secure handling of sensitive data
 - **Error Handling**: Comprehensive error management across the stack
 - **Code Quality**: ESLint and Prettier for consistent formatting
-- **Security**: Input validation, sanitization, and secure authentication [web:6]
+- **Security**: Input validation, sanitization, and secure authentication
 
 ## Learning Resources
 
@@ -74,4 +70,5 @@ This is a personal learning repository, but suggestions and improvements are wel
 ---
 
 ⭐ **Star this repository if you find it helpful!**
+
 *Happy coding! 🎯*
