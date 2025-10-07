@@ -63,7 +63,7 @@ This is a personal learning repository, but suggestions and improvements are wel
 
 ## Connect With Me
 
-- **LinkedIn**: [https://www.linkedin.com/in/ankit-prabhavak]
+- **LinkedIn**: [@ankit-prabhavak](https://www.linkedin.com/in/ankit-prabhavak)
 - **GitHub**: [@ankit-prabhavak](https://github.com/ankit-prabhavak)
 - **Email**: ankitabcd1718@gmail.com
 
