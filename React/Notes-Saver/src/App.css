@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: cursive;
+}
+
+body {
+  /* height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(126, 116, 116);
+  color: rgb(10, 10, 10);
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color:#007bff;
+  font-size: 20px;
+  width: 100vw;
+  background-color: rgb(244, 207, 158);
+  margin-bottom: 15px;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.search {
+  padding: 10px;
+  background-color: whitesmoke;
+  width: 450px;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.title {
+  border: 1px solid grey;
+  border-radius: 7px;
+  padding: 8px;
+  background-color: whitesmoke;
+}
+
+.text-container {
+  border: 1px solid grey;
+  border-radius: 7px;
+  padding: 8px;
+  background-color: whitesmoke;
+}
+
+.title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.btn {
+  background-color: #007bff;   /* Blue background */
+  color: white;                /* White text */
+  padding: 10px 20px;          /* Space around text */
+  border: none;                /* Remove border */
+  border-radius: 6px;          /* Rounded corners */
+  cursor: pointer;             /* Pointer on hover */
+  font-size: 16px;             /* Text size */
+  transition: background-color 0.3s ease; /* Smooth hover */
+}
+
+.btn:hover {
+  background-color: #0056b3;   /* Darker blue on hover */
+}
+
+.btn:active {
+  background-color: #004494;   /* Even darker when clicked */
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  padding: 5px;
+  background-color: whitesmoke;
+  border: 1px solid gray;
+  border-radius: 7px;
+  gap: 10px;
+}
+
+.card-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+}
+
+.cbtn {
+  background-color: rgb(58, 53, 53);
+  color: white;
+  border: 1px solid gray;
+  border-radius: 3px;
+  padding: 2px;
+
+}
