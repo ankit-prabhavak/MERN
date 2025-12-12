@@ -2,12 +2,9 @@
 
 > A comprehensive repository documenting my journey through full-stack web development using the MERN stack
 
-<p align="center">
-  <img src="https://img.shields.io/badge/MongoDB-%2347A248.svg?&style=for-the-badge&logo=mongodb&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Express.js-%23000000.svg?&style=for-the-badge&logo=express&logoColor=white"/>
-  <img src="https://img.shields.io/badge/React-%2361DAFB.svg?&style=for-the-badge&logo=react&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Node.js-%23339933.svg?&style=for-the-badge&logo=node.js&logoColor=white"/>
-</p>
+| Badges |
+|:--:|
+| ![MongoDB](https://img.shields.io/badge/MongoDB-%2347A248.svg?&style=for-the-badge&logo=mongodb&logoColor=white) ![Express.js](https://img.shields.io/badge/Express.js-%23000000.svg?&style=for-the-badge&logo=express&logoColor=white) ![React](https://img.shields.io/badge/React-%2361DAFB.svg?&style=for-the-badge&logo=react&logoColor=black) ![Node.js](https://img.shields.io/badge/Node.js-%23339933.svg?&style=for-the-badge&logo=node.js&logoColor=white) |
 
 ## Tech Stack
 
@@ -65,10 +62,8 @@ This is a personal learning repository, but suggestions and improvements are wel
 
 - **LinkedIn**: [@ankit-prabhavak](https://www.linkedin.com/in/ankit-prabhavak)
 - **GitHub**: [@ankit-prabhavak](https://github.com/ankit-prabhavak)
-- **Email**: ankitabcd1718@gmail.com
+- **Email**: [@ankit-prabhavak](mailto:ankitabcd1718@gmail.com)
 
 ---
 
 ⭐ **Star this repository if you find it helpful!**
-
-*Happy coding! 🎯*

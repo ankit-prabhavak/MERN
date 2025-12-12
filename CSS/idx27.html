@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Ward</title>
+    <style>
+
+        * {
+            padding: 0;
+            margin: 0;
+
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: antiquewhite;
+            width: 100%;
+            height: 100%;
+            min-height: 900px;
+            display: flex;
+
+            justify-content:space-around;
+            align-items: center;
+            
+
+        }
+
+        .card {
+            width: 360px;
+            height: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            gap: 30px;
+            background-color: white;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        .card img {
+            height: 470px;
+            width: 320px;
+            border-radius: 20px;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+
+        }
+
+        .card h2 {
+            font-family: cursive;
+            font-size: 1.5rem;
+            font-weight: 200;
+        }
+
+        .card p {
+            font-size: 1rem;
+            font-family: cursive;
+
+        }
+
+        .ward {
+            height: 600px;
+            width: 360px;
+
+            border-radius: 20px;
+            gap: 20px;
+            /* padding: 20px; */
+
+            background-color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+            
+        }
+
+        .ward img {
+            width: 100%;
+            height: 30%;
+
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+        }
+
+        .box {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+
+
+        }
+
+        .box h2{
+            font-size: 1.5rem;
+            font-family: cursive;
+        }
+
+        .box p {
+            font-size: 1rem;
+            font-family: cursive;
+            font-weight: 200;
+        }
+
+        .ward .say {
+
+            width: 80%;
+            height: 9%;
+            background-color: firebrick;
+            border-radius: 10px;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+          
+
+            
+        }
+
+        .ward .say p {
+            font-family: cursive;
+            font-size: 1rem;
+            font-weight: 200;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #pay {
+            width: 80%;
+            height: 9%;
+
+            background-color:black;
+            color: white;
+            font-size: 1rem;
+            font-family: cursive;
+            border-radius: 10px;
+            box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+        }
+
+        .ward .bye a {
+            text-decoration: none;
+            color: black;
+            font-family: cursive;
+            font-size: large;
+            font-weight: 200;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="card">
+
+            <img src="generated-image.png" alt="profile">
+
+            <h2>I am a Hacker!</h2>
+
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ad nobis debitis illo nulla distinctio voluptas labore, eligendi laudantium!
+            </p>
+
+        </div>
+
+        <div class="ward">
+            <img src="h4.png" alt="profile">
+
+            <div class="box">
+                <h2>I am a Red Teamer!</h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae ab odit similique, nihil culpa architecto.
+                </p>
+            </div>
+
+            <div class="say">
+                <p>Say Hello!</p>
+            </div>
+
+            <button id="pay">
+                Contact
+
+            </button>
+
+            <div class="bye">
+                <a href="#">Bye Bye!</a>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+</body>
+</html>
