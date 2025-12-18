@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE email SYSTEM "xd.dtd">
+<email>
+  <from>ankit@example.com</from>
+  <to>friend@example.com</to>
+  <subject>Hello Dunia</subject>
+  <body>
+    Hi there,
+    This is my first XML email example!
+  </body>
+</email>

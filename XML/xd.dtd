@@ -1,0 +1,6 @@
+<!-- filepath: c:\Users\ankit\OneDrive\Desktop\MERN\XML\xd.dtd -->
+<!ELEMENT email (from, to, subject, body)>
+<!ELEMENT from (#PCDATA)>
+<!ELEMENT to (#PCDATA)>
+<!ELEMENT subject (#PCDATA)>
+<!ELEMENT body (#PCDATA)>
