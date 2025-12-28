@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops and Strings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f9f9f9;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        pre {
+            background: #ecf0f1;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .output {
+            background: #dfe6e9;
+            border: 1px solid #b2bec3;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript: Loops and Strings</h1>
+
+    <h2>1. For Loop</h2>
+    <p>The <code>for</code> loop is used when you know how many times to repeat an action.</p>
+    <pre>
+for (let i = 1; i <= 5; i++) {
+    console.log("Number:", i);
+}
+    </pre>
+    <div id="forLoopOutput" class="output"></div>
+
+    <h2>2. While Loop</h2>
+    <p>The <code>while</code> loop repeats as long as a condition is true.</p>
+    <pre>
+let i = 1;
+while (i <= 5) {
+    console.log("Count:", i);
+    i++;
+}
+    </pre>
+    <div id="whileLoopOutput" class="output"></div>
+
+    <h2>3. Do-While Loop</h2>
+    <p>The <code>do...while</code> loop executes the block at least once before checking the condition.</p>
+    <pre>
+let j = 1;
+do {
+    console.log("Value:", j);
+    j++;
+} while (j <= 5);
+    </pre>
+    <div id="doWhileOutput" class="output"></div>
+
+    <h2>4. String Operations</h2>
+    <p>Common operations you can perform on strings.</p>
+    <pre>
+let text = "JavaScript";
+console.log("Length:", text.length);
+console.log("Uppercase:", text.toUpperCase());
+console.log("Lowercase:", text.toLowerCase());
+console.log("Substring (0-4):", text.substring(0, 4));
+console.log("Replace:", text.replace("Java", "Type"));
+    </pre>
+    <div id="stringOutput" class="output"></div>
+
+    <!-- Link to external JS file -->
+    <script src="idx42.js"></script>
+</body>
+</html>
