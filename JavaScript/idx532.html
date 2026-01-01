@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listener Problem</title>
+</head>
+<body>
+
+    <div id="wrapper">
+        <p id="fpara">First Para</p>
+        <p id="spara">Second Para</p>
+        <p id="tpara">Third Para</p>
+        <p id="fopara">Fourth Para</p>
+
+    </div>
+
+
+    <script>
+        const wrapper = document.getElementById("wrapper");
+
+        wrapper.addEventListener("click", function(event){
+            alert("You clicked on " + event.target.innerText);
+        });
+
+        // const paras = document.querySelectorAll("p");
+        
+        // for(let i=0; i<wrapper.children.length; i++){
+        //     wrapper.children[i].addEventListener("click", function(){
+        //         alert("You clicked on " + wrapper.children[i].innerText);
+        //     });
+        // }
+    
+    
+    </script>
+    
+</body>
+</html>

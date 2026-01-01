@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Loop</title>
+</head>
+<body>
+    <!-- 
+    Event Loop
+    ---------------------
+    The event loop is a programming construct that waits for and dispatches events or messages in a program.
+    It works by continuously checking the call stack and the message queue. If the call stack is empty, it takes the first event from the queue and pushes it onto the stack, which effectively runs it.
+    This allows for non-blocking I/O operations, enabling the program to remain responsive while waiting for operations to complete.
+    -->
+
+
+    <!-- 
+    Synchronous vs Asynchronous code
+    ---------------------
+    Synchronous code is executed sequentially, meaning each operation must complete before the next one begins. 
+    This can lead to blocking, where the program waits for a task to finish before moving on.
+    Asynchronous code, on the other hand, allows multiple operations to be initiated without waiting for them to complete. 
+    This is often achieved using callbacks, promises, or async/await syntax, 
+    enabling the program to remain responsive and handle other tasks while waiting for operations to finish.    
+    -->
+    
+
+    <!-- 
+    blocking vs Non-blocking code
+
+    ---------------------
+
+    Blocking code refers to operations that halt the execution of subsequent code until the current operation completes.
+    This can lead to delays and unresponsiveness in applications, especially during long-running tasks.
+    Non-blocking code, on the other hand, allows other operations to continue executing while waiting for a task to finish.
+    This is often achieved through asynchronous programming techniques, such as callbacks, promises, or async/await,
+    enabling applications to remain responsive and efficient.
+
+
+    -->
+
+
+    <!-- 
+    callback stack
+    browser APIs
+    callback queue
+    event loop
+
+    -->
+
+    <script>
+
+        console.log("start");
+
+        setTimeout(function sayName() {
+            console.log("Namaste JavaScript");
+        }, 5000);
+
+        console.log("end");
+
+    </script>
+    
+    
+
+</body>
+</html>

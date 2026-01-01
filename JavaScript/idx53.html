@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events and Listeners</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+            background-color: #f7f7f7;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #colorBox {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            margin: 20px auto;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        input {
+            padding: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎯 JavaScript Events & Event Listeners Demo</h1>
+
+    <!-- Click Event -->
+    <button id="clickBtn">Click Me!</button>
+
+    <!-- Mouseover Event -->
+    <div id="colorBox"></div>
+
+    <!-- Keypress Event -->
+    <input type="text" id="nameInput" placeholder="Type your name...">
+
+    <!-- Change Event -->
+    <select id="colorSelect">
+        <option value="">Select a color</option>
+        <option value="lightgreen">Light Green</option>
+        <option value="lightpink">Light Pink</option>
+        <option value="lightyellow">Light Yellow</option>
+    </select>
+
+    <h2 id="message"></h2>
+
+
+
+    <div id="outer" style="padding: 40px; background-color: lightcoral;">
+        Outer Div
+        <div id="inner" style="padding: 40px; background-color: lightblue;">
+            Inner Div
+            <button id="btn">Click Me</button>
+        </div>
+    </div>
+
+    <div>
+        <a href="https://www.google.com" target="_blank" id="googleLink">Go to Google</a>
+    </div>
+
+  
+    <script>
+        // Click Event Listener
+        document.getElementById("clickBtn").addEventListener("click", function() {
+            document.getElementById("message").innerText = "Button clicked! 👏";
+        });
+
+        // Mouseover Event Listener
+        const box = document.getElementById("colorBox");
+        box.addEventListener("mouseover", function() {
+            box.style.backgroundColor = "tomato";
+        });
+        box.addEventListener("mouseout", function() {
+            box.style.backgroundColor = "skyblue";
+        });
+
+        // Keypress Event Listener
+        document.getElementById("nameInput").addEventListener("keyup", function(event) {
+            document.getElementById("message").innerText = "Hello, " + event.target.value + "!";
+        });
+
+        // Change Event Listener (Dropdown)
+        document.getElementById("colorSelect").addEventListener("change", function(event) {
+            document.body.style.backgroundColor = event.target.value || "#f7f7f7";
+        });
+
+        // Remove Event Listener Example
+        function showAlert() {
+            alert("This alert will be removed after 5 seconds.");
+        }
+        const alertBtn = document.getElementById("clickBtn");
+        alertBtn.addEventListener("click", showAlert);
+
+        // setTimeout(function() {
+        //     alertBtn.removeEventListener("click", showAlert);
+        //     console.log("Alert event listener removed.");
+        // }, 5000);
+
+        // Note: You can test the removal by clicking the button after 5 seconds.
+        
+
+        const outer = document.getElementById("outer");
+        const inner = document.getElementById("inner");
+        const btn = document.getElementById("btn");
+
+        // CAPTURING PHASE (3rd parameter true)
+        outer.addEventListener("click", () => console.log("Outer DIV - Capturing"), true);
+        inner.addEventListener("click", () => console.log("Inner DIV - Capturing"), true);
+        btn.addEventListener("click", () => console.log("Button - Capturing"), true);
+
+        // BUBBLING PHASE (3rd parameter false)
+        outer.addEventListener("click", () => console.log("Outer DIV - Bubbling"));
+        inner.addEventListener("click", () => console.log("Inner DIV - Bubbling"));
+        btn.addEventListener("click", () => console.log("Button - Bubbling"));
+
+
+
+        // Event Object Example
+        btn.addEventListener("click", function(event) {
+            console.log("Event Target:", event.target); // The element that triggered the event
+            console.log("Event Type:", event.type); // Type of the event (click, mouseover, etc.)
+            console.log("Event Timestamp:", event.timeStamp); // Time when the event occurred
+        });
+
+        // Default Behavior Prevention
+        document.getElementById("googleLink").addEventListener("click", function(event) {
+            event.preventDefault(); // Prevent the default action of navigating to Google
+            alert("Default action prevented! You clicked the link.");
+        });
+
+    </script>
+
+</body>
+</html>
+
+
+<!-- 
+3 Phases of Event Flow
+Phase	Name	What Happens
+1️⃣	Capturing Phase (Event Capturing)	The event starts from the top of the DOM (like <html> → <body> → …) and goes downward toward the element that was clicked.
+2️⃣	Target Phase	The event reaches the actual target element (the one the user interacted with).
+3️⃣	Bubbling Phase (Event Bubbling)	After reaching the target, the event then bubbles up back through the DOM tree (from the element → its parent → up to <html>).
+-->
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performace Improvement</title>
+</head>
+<body>
+
+    
+    <!-- 
+    Reflow and Repaint
+    ---------------------
+    Reflow: When the layout of the page changes (like adding/removing elements, changing size, etc.), the browser recalculates the positions and sizes of elements. This process is called reflow.
+    Repaint: After reflow, the browser updates the pixels on the screen to reflect the new layout. This process is called repaint.
+    -->
+
+    <!-- 
+    Document Fragment
+    ---------------------
+    A Document Fragment is a lightweight container that can hold a portion of the DOM. 
+    It is not part of the main document tree, so changes made to it do not cause reflow or repaint until it is appended to the main document.
+    -->
+
+
+
+    <script>
+
+        // code 1
+        const t1 = performance.now();
+
+        for(let i=0; i<=100; i++){
+            const para = document.createElement("p");
+            para.innerText = "This is para " + i;
+            document.body.appendChild(para);
+        }
+
+        const t2 = performance.now();
+
+        console.log("Time taken: " + (t2 - t1) + " ms");
+
+
+
+        // code 2
+        const t3 = performance.now();
+        let myDiv = document.createElement("div");
+    
+        for(let i=0; i<=100; i++){
+            const para = document.createElement("p");
+            para.innerText = "This is para " + i*10;
+            myDiv.appendChild(para);
+        }
+        document.body.appendChild(myDiv);
+
+        const t4 = performance.now();
+
+        console.log("Time taken: " + (t4 - t3) + " ms");
+
+        // code 3
+        const t5 = performance.now();
+        let myFragment = document.createDocumentFragment();
+
+        for(let i=0; i<=100; i++){
+            const para = document.createElement("p");
+            para.innerText = "This is para " + i*100;
+            // no reflow or repaint
+            myFragment.appendChild(para);
+        }
+
+        document.body.appendChild(myFragment);
+
+        const t6 = performance.now();
+
+        console.log("Time taken: " + (t6 - t5) + " ms");
+
+
+
+    </script>
+    
+</body>
+</html>

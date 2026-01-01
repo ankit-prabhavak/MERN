@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure in JavaScript</title>
+</head>
+<body>
+    
+    I Need A Closure
+
+    <!-- 
+    -------
+    Closure : A top level entity
+    -------
+
+    closure = function + req data or lexical scope or surrounding state
+
+    -->
+
+
+
+    <script>
+        
+        let name = "Ankit";
+        function init() {
+
+            {
+                let name = "SRK";
+            }
+
+
+            let name = "Mozilla"; // block scope
+
+            function displayName() {
+                // displayName() is the function, that forms a closure 
+                let name = "Love";
+                console.log(name); // use variable declared in the parent function
+            }
+
+            displayName();
+        }
+
+        init();
+
+        
+        function outerFunction() {
+            let name = "Mel.";
+
+            function innerFunction() {
+                console.log(name);
+            }
+
+            return inner;
+        }
+
+        let inner = outerFunction();
+        // IN regular flow the Mel. should get deleted but due to closure inner get bind with its req data.
+        inner();
+
+    </script>
+    
+</body>
+</html>

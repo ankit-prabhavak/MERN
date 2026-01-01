@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Changing CSS </title>
+</head>
+<body>
+
+    <div id="myDiv" style="color: blue; border: 2px solid black; padding: 10px; background-color: lightgreen;">
+        
+        First Div
+
+        <p id="myP" style="color: red; border: 2px solid green; padding: 10px; background-color: blanchedalmond;" >
+            First Paragraph
+        </p>
+
+        <div id="myDiv2" style="color: orange; border: 2px solid purple; padding: 10px; background-color: lightcoral;">
+            Second Div
+
+            <p id="myP2" class="gkp" style="color: brown; border: 2px solid pink; padding: 10px; background-color: lightsalmon;">
+                Second Paragraph
+            </p>
+
+        </div>
+    </div>
+
+
+    <script>
+        // Accessing elements
+        const myDiv = document.getElementById('myDiv');
+        const myP = document.getElementById('myP');
+        const myDiv2 = document.getElementById('myDiv2');
+        const myP2 = document.getElementById('myP2');
+
+        // Changing styles
+        myDiv.style.backgroundColor = 'lightblue';
+        myP.style.color = 'green';
+        myDiv2.style.border = '4px dashed red';
+        myP2.style.padding = '20px';
+
+        // Logging to console to verify changes
+        console.log('myDiv styles:', myDiv.style.cssText);
+        console.log('myP styles:', myP.style.cssText);
+        console.log('myDiv2 styles:', myDiv2.style.cssText);
+        console.log('myP2 styles:', myP2.style.cssText);
+
+        // cssText property to see all styles and modify them
+        myDiv.style.cssText += 'font-size: 20px; font-weight: bold;';
+        console.log('Updated myDiv styles:', myDiv.style.cssText);
+
+        //setAttribute to change styles
+        myP2.setAttribute('style', 'color: white; background-color: black; padding: 15px; border: 3px solid yellow;');
+        console.log('Updated myP2 styles:', myP2.style.cssText);
+
+        // className to add a class (assuming CSS class is defined in a stylesheet)
+        
+        myP.className = 'gopal mohan';
+        console.log('myP className:', myP.className);
+
+
+        // classList to add/remove/toggle classes
+        myDiv2.classList.add('newClass');
+        console.log('myDiv2 classList after adding newClass:', myDiv2.classList);
+
+        myDiv2.classList.remove('newClass');
+        console.log('myDiv2 classList after removing newClass:', myDiv2.classList);
+        
+        myDiv2.classList.toggle('toggleClass');
+        console.log('myDiv2 classList after toggling toggleClass:', myDiv2.class);
+        
+        myDiv2.classList.toggle('toggleClass');
+        console.log('myDiv2 classList after toggling toggleClass again:', myDiv2);
+        
+        console.log('myDiv2 classList contains toggleClass:', myDiv2.classList.contains('toggleClass'));
+        
+    </script>
+
+</body>
+</html>

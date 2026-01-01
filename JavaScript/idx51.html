@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+
+    <style>
+        .paraClass{
+            color: blue;
+            background-color: yellow;
+            font-size: 20px;
+            border: 2px solid black;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        #heading1{
+            color: green;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            border-bottom: 2px solid gray;
+            padding-bottom: 5px;
+        }
+
+        #para1{
+            font-style: italic;
+            color: purple;
+        }
+
+        #para2{
+            font-weight: bold;
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <p id="para1">
+        First paragraph.
+    </p>
+    
+    <h1 id="heading1">
+        This is a heading
+    </h1>
+
+    <p id="para2">
+        Second paragraph.
+    </p>
+    
+
+    <p class="paraClass">
+        Hello Ji kaise ho aap log
+    </p>
+    
+    <script>
+        let var1 = document.getElementById("para1");
+
+        var1.innerHTML = "<p>This is the updated first paragraph.</p>";
+        var1.style.color = "orange";
+        var1.style.backgroundColor = "lightgray";
+
+        let heading = document.createElement("h2");
+
+        heading.textContent = "This is a new heading added by JavaScript.";
+
+        document.body.appendChild(heading);
+
+        let localpara = document.createElement("p");
+        localpara.textContent = "This is a new paragraph added by JavaScript.";
+
+        // Adding the new paragraph before the existing paragraph with id "para1"
+        para1.insertAdjacentElement("beforeend", localpara); 
+        
+
+        // How to remove an element
+        let para2 = document.getElementById("para2");
+        para2.remove(); // This will remove the second paragraph from the DOM
+        
+        let pappu = document.getElementsByClassName("paraClass")[0];
+
+        document.body.removeChild(pappu); // This will also remove the second paragraph from the DOM
+
+
+    </script>
+
+</body>
+</html>
+
+<!--
+    Document Object Model (DOM) Methods to Access Elements:
+1. getElementById
+2. getElementsByClassName
+3. getElementsByTagName
+4. querySelector
+5. querySelectorAll
+
+Updating Content and Attributes:
+1. innerHTML
+2. textContent
+3. setAttribute
+4. getAttribute
+5. removeAttribute
+6. classList (add, remove, toggle)
+7. style (to modify CSS properties)
+8. createElement
+9. appendChild
+10. removeChild
+11. replaceChild -->

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+<body>
+
+    <!--
+    Promises:   
+    A promise in JavaScript is an object that represents the eventual completion 
+    (or failure) of an asynchronous operation and its resulting value.
+    It allows you to write asynchronous code in a more manageable and readable way compared to traditional callbacks.
+
+    A promise can be in one of three states:
+    1. Pending: The initial state, neither fulfilled nor rejected.
+    2. Fulfilled: The operation completed successfully, and the promise has a resulting value.
+    3. Rejected: The operation failed, and the promise has a reason for the failure.
+
+    Promises are created using the Promise constructor, which takes a function (executor) as an argument.
+    The executor function receives two arguments: resolve and reject.
+    You call resolve when the asynchronous operation is successful and reject when it fails.
+    Promises can be chained using the .then() method for handling fulfilled values and the .catch() method for handling rejections.
+
+    -->
+
+    <script>
+        // Example of a Promise
+        let promise = new Promise(function(resolve, reject) {
+            // Simulating an asynchronous operation using setTimeout
+            setTimeout(function() {
+                let success = true; // Change this to false to simulate a failure
+                if (success) {
+                    resolve("Operation completed successfully!");
+                } else {
+                    reject("Operation failed.");
+                }
+            }, 2000);
+        });
+
+
+        // then and catch methods
+        promise
+            .then(function(result) {
+                console.log("Then ka result:" + result); // This will run if the promise is fulfilled
+            })
+            .catch(function(error) {
+                console.error("Error: " + error); // This will run if the promise is rejected
+            });
+        
+
+        // promise chaining
+        let promise2 = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve(5);
+            }, 1000);
+        });
+
+        promise2
+            .then(function(result) {
+                console.log("First then: " + result); // 5
+                return result * 2;
+            })
+            .then(function(result) {
+                console.log("Second then: " + result); // 10
+                return result * 3;
+            })
+            .then(function(result) {
+                console.log("Third then: " + result); // 30
+            })
+            .catch(function(error) {
+                console.error("Error: " + error);
+            })
+            .finally(function() {
+                console.log("Promise is settled (either fulfilled or rejected).");
+            });
+
+        // Multiple Promises with Promise.all
+        let promiseA = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve("Promise A resolved");
+            }, 1000);
+        });
+
+        let promiseB = new Promise(function(resolve, reject) {
+            setTimeout(function() {
+                resolve("Promise B resolved");
+            }, 2000);
+        });
+
+        Promise.all([promiseA, promiseB])
+            .then(function(results) {
+                console.log("All promises resolved:", results);
+            })
+            .catch(function(error) {
+                console.error("One of the promises failed:", error);
+            });
+
+    </script>
+    
+</body>
+</html>
