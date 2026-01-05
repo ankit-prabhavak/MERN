@@ -1,0 +1,17 @@
+/* App.css */
+
+/* Center everything in the viewport */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Optional global styles for smoothness */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
