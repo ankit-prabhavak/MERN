@@ -1,0 +1,10 @@
+What is React?
+React is a JavaScript Library that is used to create UI.
+
+feature:
+component based /  modular
+reuse
+virtual dom
+dynamic updation
+
+
